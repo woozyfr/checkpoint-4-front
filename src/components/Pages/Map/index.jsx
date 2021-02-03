@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./css/styles.css";
 import L from "leaflet";
 
@@ -31,7 +32,7 @@ export default function Map() {
         />
       </form>
       <div id="map" />
-      <div>Ajouter un nouveau Bar</div>
+      <Link to="/admin">Administration</Link>
     </div>
   );
 }
