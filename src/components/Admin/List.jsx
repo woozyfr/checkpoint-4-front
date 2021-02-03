@@ -2,81 +2,29 @@ import React, { useState, useEffect } from "react";
 import "./css/styles.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 /**
  * @class Layout
  * @description template du site
  */
 
-const FakeBars = [
-  {
-    id: 1,
-    name: "babarcoule",
-    code_postal: "13190",
-    address: "5 rue du peché",
-    city: "Allauch",
-    longitude: 43.0589,
-    latitude: 5.9299,
-    isBeer: 1,
-    isVodka: 1,
-    isWhisky: 1,
-  },
-  {
-    id: 2,
-    name: "ClandibarSaga",
-    code_postal: "13190",
-    address: "5 rue du peché",
-    city: "Allauch",
-    longitude: 43.0589,
-    latitude: 5.9299,
-    isBeer: 1,
-    isVodka: 1,
-    isWhisky: 1,
-  },
-  {
-    id: 3,
-    name: "Bara tapin",
-    code_postal: "13190",
-    address: "5 rue du peché",
-    city: "Allauch",
-    longitude: 43.0589,
-    latitude: 5.9299,
-    isBeer: 1,
-    isVodka: 1,
-    isWhisky: 1,
-  },
-  {
-    id: 4,
-    name: "La couleuvre",
-    code_postal: "13190",
-    address: "5 rue du peché",
-    city: "Allauch",
-    longitude: 43.0589,
-    latitude: 5.9299,
-    isBeer: 1,
-    isVodka: 1,
-    isWhisky: 1,
-  },
-  {
-    id: 5,
-    name: "Dodo la saumur",
-    code_postal: "13190",
-    address: "5 rue du peché",
-    city: "Allauch",
-    longitude: 43.0589,
-    latitude: 5.9299,
-    isBeer: 1,
-    isVodka: 1,
-    isWhisky: 1,
-  },
-];
 export default function List() {
-  const [bars, setBars] = useState(FakeBars);
+  const [bars, setBars] = useState([]);
+  useEffect(() => {
+    if (!bars.length) {
+      axios.get(`http://localhost:3048/bars/`).then((res) => {
+        setBars(res.data);
+      });
+    }
+  }, []);
+
   return (
     <div>
       <h1>
-        Liste des bars{" "}
-        <button className="btn btn-success">Ajouter un nouveau Bar</button>
+        Liste des bars
+        <Link to="/admin/add" className="btn btn-success">
+          Ajouter un nouveau Bar
+        </Link>
       </h1>
 
       <table class="table table-dark">
@@ -101,6 +49,12 @@ export default function List() {
                     className="btn btn-primary"
                   >
                     Editer
+                  </Link>{" "}
+                  <Link
+                    to={`/admin/delete/${bar.id}`}
+                    className="btn btn-danger"
+                  >
+                    Delete
                   </Link>
                 </td>
               </tr>
