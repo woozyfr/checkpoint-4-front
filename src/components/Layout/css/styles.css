@@ -1,209 +1,41 @@
-.headerpunchlineslim {
-  font-size: 20px;
-  margin-top: 10px;
+body {
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
 }
 
-.headerpunchlineBig {
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 24px;
+#logo {
+  color: #FFF;
+  font-family: 'Pacifico',
+    cursive;
+  font-size: 110px;
+  position: absolute;
+  top: 10px;
+  left: 190px;
 }
 
-.logoWildCodeSchool {
-  margin-top: 15px;
-}
-
-.h100 {
-  height: 100%;
-}
-
-.bigTitle {
-  font-size: 70px;
-  font-weight: bold;
-  color: #f2f2f2;
-}
-
-.mediumTitle {
-  font-size: 48px;
-  font-weight: bold;
-  color: #f2f2f2;
-}
-
-.home-title-city {
-  font-size: 30px;
-  font-weight: bold;
-  color: #313131;
+#logo>span {
   display: block;
+  font-family: 'Poppins',
+    sans-serif;
+  font-size: 32px;
+  line-height: 0px;
 }
 
-/***** FOOTER *****/
-
-footer {
-  background-color: #313131;
-  min-height: 300px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: #fff;
-}
-
-/* LOGO */
-
-.top-border {
-  margin: 3%;
-  border-top: rgba(255, 255, 255, 0.158) 1px solid;
-}
-
-.center-content {
-  margin: 0 auto;
-  margin: 5%;
-}
-
-.border-title {
-  margin-right: 30%;
-  width: 10%;
-}
-
-.social-border-title {
-  margin-right: 64%;
-  width: 10%;
-}
-
-.title-footer {
-  margin-left: 30%;
-  margin-bottom: 5%;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-}
-
-.title-footer-horaire {
-  margin-left: 25%;
-  margin-bottom: 5%;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-}
-
-.connect-social-title {
-  margin-left: 13%;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-}
-
-.adress > h6 {
-  margin-left: 30%;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-}
-
-.adress > p {
-  text-align: left;
-  margin-left: 30%;
-  line-height: 50%;
-}
-
-.horaire > p {
-  text-align: left;
-  margin-left: 25%;
-  line-height: 50%;
-}
-
-.liens-utiles {
-  display: flex;
-  flex-direction: column;
-}
-
-.liens-utiles > a {
-  text-align: left;
-  margin-left: 30%;
-  line-height: 20px;
-  color: #fff;
-}
-
-.btn-footer {
-  text-transform: uppercase;
-  color: #fff;
-  border: #fff 2px solid;
-  background: none;
-  font-weight: bold;
-  padding: 5%;
-  cursor: pointer;
-  text-align: left;
-}
-
-.btn-footer-contact {
-  text-transform: uppercase;
-  color: #fff;
-  border: #fff 2px solid;
-  background: none;
-  font-weight: bold;
-  padding: 5%;
-  cursor: pointer;
-  text-align: left;
-}
-
-.icon-social {
-  padding: 2%;
-  margin: 1%;
-  width: 13%;
-  color: #fff;
-  border: #fff 2px solid;
-  cursor: pointer;
-}
-
-#map {
-  width: 100%;
-  height: 500px;
-  margin-top: 70px;
+.absolute {
+  position: absolute;
 }
 
 .relative {
   position: relative;
 }
 
-.abso-choisir-sur-carte {
-  position: absolute;
+.main{
+  margin: 30px 30px 30px 550px;
+  color:#FFF;
 }
 
-.mrg-home-decalage {
-  margin-top: 60px;
-}
-
-/***** VERSION MOBILE *****/
-
-@media only screen and (max-width: 768px) {
-  .title-footer {
-    margin-right: 0;
-  }
-
-  .social-border-title {
-    margin-left: 30%;
-  }
-
-  .connect-social-title {
-    margin-left: 30%;
-  }
-
-  .horaire > p {
-    margin-left: 30%;
-    margin-right: 0;
-  }
-
-  .title-footer-horaire {
-    text-align: center;
-  }
-
-  .btn-footer {
-    margin: 20px;
-  }
-
-  .btn-footer-contact {
-    margin-left: 12%;
-  }
+#map{
+  margin-top: 20px;;
+  height:800px;
+  width:100%;
 }
