@@ -66,23 +66,40 @@ export default function Map() {
     }
   }, [bars]);
 
+  const multipleWordsSearch = (words, row) => {
+    console.log(words);
+    const flatted = Object.values(row).join(" ").toLowerCase();
+    for (const word of words) {
+      if (!flatted.includes(word.toLowerCase())) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   useEffect(() => {
     if (search.length < 3) {
       setBars(barsSource);
     } else {
       let listBars = barsSource;
       if (barsSource.length) {
-        listBars = barsSource.filter(
-          (q) =>
-            q.name.toLowerCase().includes(search.toLowerCase()) ||
-            q.city.toLowerCase().includes(search.toLowerCase()) ||
-            q.description.toLowerCase().includes(search.toLowerCase()) ||
-            q.code_postal.toLowerCase().includes(search.toLowerCase()) ||
-            q.secret_code.toLowerCase().includes(search.toLowerCase()) ||
-            q.address.toLowerCase().includes(search.toLowerCase())
-        );
+        const words = search.split(" ");
+        console.log(words);
+        listBars = bars.filter((q) => multipleWordsSearch(words, q));
+
+        //   listBars = barsSource.filter(
+        //     (q) =>
+        //       q.name?.toLowerCase().includes(search?.toLowerCase()) ||
+        //       q.city?.toLowerCase().includes(search?.toLowerCase()) ||
+        //       q.description?.toLowerCase().includes(search?.toLowerCase()) ||
+        //       q.code_postal?.toLowerCase().includes(search?.toLowerCase()) ||
+        //       q.secret_code?.toLowerCase().includes(search?.toLowerCase()) ||
+        //       q.address?.toLowerCase().includes(search?.toLowerCase())
+        //   );
+        // }
+
+        setBars(listBars);
       }
-      setBars(listBars);
     }
   }, [search.length]);
 

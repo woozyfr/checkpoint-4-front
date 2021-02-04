@@ -25,6 +25,9 @@ export default function List() {
         <Link to="/admin/add" className="btn btn-success">
           Ajouter un nouveau Bar
         </Link>
+        <Link to="/" className="btn btn-primary">
+          Retour a la carte
+        </Link>
       </h1>
 
       <table class="table table-dark">
