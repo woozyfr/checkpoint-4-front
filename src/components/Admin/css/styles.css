@@ -1,0 +1,14 @@
+.rowAutocomplete{
+  background-color: #fff;
+  color:#000;
+  padding:10px;
+  margin:5px;
+}
+
+
+.rowAutocomplete:hover {
+  background-color: grey;
+  color: #000;
+  padding: 10px;
+  margin: 5px;
+}

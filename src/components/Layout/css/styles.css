@@ -1,0 +1,41 @@
+body {
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
+}
+
+#logo {
+  color: #FFF;
+  font-family: 'Pacifico',
+    cursive;
+  font-size: 110px;
+  position: absolute;
+  top: 10px;
+  left: 190px;
+}
+
+#logo>span {
+  display: block;
+  font-family: 'Poppins',
+    sans-serif;
+  font-size: 32px;
+  line-height: 0px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.main{
+  margin: 30px 90px 30px 550px;
+  color:#FFF;
+}
+
+#map{
+  margin-top: 20px;;
+  height:800px;
+  width:100%;
+}
